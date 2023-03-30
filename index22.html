@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr1=[]
+  function tryRemoveFromArray(arr,number){
+    for (let i = 0; i < arr.length; i++) {
+      if (number!==i){
+        arr1.push(arr[i])
+      }
+    }
+  }
+  let arr= [6,1,2,3,6,8,5,7,6,6,-2]
+  let number = 4
+  tryRemoveFromArray(arr,number)
+  console.log(arr1)
+</script>
+</body>
+</html>

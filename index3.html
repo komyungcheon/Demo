@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function checkSubstring(str1, str2) {
+    // Lấy độ dài của hai chuỗi
+    let len1 = str1.length;
+    let len2 = str2.length;
+
+    // Duyệt từng vị trí trong chuỗi str2
+    for (var i = 0; i < len2; i++) {
+      // Nếu chuỗi str1 vượt quá phạm vi của chuỗi str2 thì thoát khỏi vòng lặp
+      if (i + len1 > len2) {
+        break;
+      }
+      // Kiểm tra xem chuỗi str1 có bắt đầu từ vị trí hiện tại của chuỗi str2 hay không
+      if (str2.substring(i, i + len1) === str1) {
+        return true;
+      }
+    }
+    // Nếu không tìm thấy chuỗi str1 trong chuỗi str2, trả về false
+    return false;
+  }
+  let result = checkSubstring("hello", "hello world");
+  console.log(result); // Kết quả: true
+
+</script>
+</body>
+</html>
